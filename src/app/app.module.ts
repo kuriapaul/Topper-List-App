@@ -1,18 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { OrderModule } from 'ngx-order-pipe';
 import { AppComponent } from './app.component';
-
+import { StudentDetailComponent } from './student-detail/student-detail.component';
+import { StudentrecordService } from './studentrecord.service';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StudentDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    OrderModule
   ],
-  providers: [],
+  providers: [StudentrecordService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
